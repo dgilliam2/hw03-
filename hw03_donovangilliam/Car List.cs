@@ -43,7 +43,6 @@ namespace hw03_donovangilliam
             CarInfoList.Clear();
              //stores all lines in an array and then looks at each one for class info
             string[] fileLines = File.ReadAllLines(filepath);
-            
             for (int i = 0; i < fileLines.Length; i+=5)
             {
                 CarInfo info = new CarInfo()

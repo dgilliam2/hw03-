@@ -60,7 +60,7 @@ namespace hw03_donovangilliam
         //modified from LoadTxtIntoList
         private void UpdateTxtFile(CarInfo updateinfo)
         {
-            string[] fileLines = File.ReadAllLines(Resources.SavedList);
+            string[] fileLines = File.ReadAllLines(CarList.filepath);
             for (int i = 0; i < fileLines.Length; i += 5)
             {
                 if (fileLines[i] == txt_curvin.Text)
@@ -72,7 +72,7 @@ namespace hw03_donovangilliam
                     fileLines[i + 4] = updateinfo.colorString;
                 }
             }
-            File.WriteAllLines(Resources.SavedList, fileLines);
+            File.WriteAllLines(CarList.filepath, fileLines);
         }
         private void btn_updatecar_Click(object sender, EventArgs e)
         {

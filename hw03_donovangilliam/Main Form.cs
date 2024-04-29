@@ -17,6 +17,12 @@ namespace hw03_donovangilliam
         public MainForm()
         {
             InitializeComponent();
+            if (!File.Exists(CarList.filepath)) 
+            {
+                using (StreamWriter sw = File.CreateText(CarList.filepath))
+                {
+                }
+            }
             CarList.LoadTxtIntoList();
             FillListBox();
         }
